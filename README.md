@@ -1,1 +1,1 @@
-CS361 Group-19 FakeNewsDetector repo
+CS361 Group-19 FakeNewsDetector Repo
