@@ -57,10 +57,16 @@ popup.addEventListener("click", function (e) {
   }
 });
 
-var optionsLink = document.querySelector(".js-options");
+var optionsLink = document.querySelector(".js-signIn");
 optionsLink.addEventListener("click", function (e) {
   e.preventDefault();
-  _ext2.default.tabs.create({ 'url': _ext2.default.extension.getURL('options.html') });
+  _ext2.default.tabs.create({ 'url': _ext2.default.extension.getURL('signIn.html') });
+});
+
+var optionsLink2 = document.querySelector(".js-signUp");
+optionsLink2.addEventListener("click", function (e) {
+  e.preventDefault();
+  _ext2.default.tabs.create({ 'url': _ext2.default.extension.getURL('signUp.html') });
 });
 
 },{"./utils/ext":2,"./utils/storage":3}],2:[function(require,module,exports){

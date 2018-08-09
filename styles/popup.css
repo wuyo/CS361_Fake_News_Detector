@@ -284,3 +284,38 @@ footer a:hover {
   outline: none;
   font-size: 1em;
 }
+
+#sign-in-button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+#sign-up-button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #42cef4;
+  color: #ffffff;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+
+#button-div{
+  text-align: center;
+}
+
+#signUp-div{
+  text-align: center;
+}
+
+
