@@ -19,7 +19,6 @@
     "http://*/*",
     "https://*/*"
   ],
-  "options_page": "options.html",
   "content_scripts": [
     {
       "matches": [
@@ -42,5 +41,3 @@
     "default_popup": "popup.html"
   }
 }
-
-
