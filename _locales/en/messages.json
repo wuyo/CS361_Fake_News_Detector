@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Ext Starter",
+    "message": "Fake News Detector",
     "description": "The name of the application"
   },
   "btnTooltip": {
@@ -8,7 +8,7 @@
     "description": "Tooltip for button"
   },
   "appDescription": {
-    "message": "Boilerplate for building cross browser extensions",
+    "message": "A browser extension that can identify the FAKE news",
     "description": "The description of the application"
   }
 }
