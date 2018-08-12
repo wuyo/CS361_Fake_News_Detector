@@ -7,14 +7,17 @@ function checkPassword(temppass, repeatpass){
 }
 
 function storageHandlerSignup(address, password){
-    // if (!theValue) {
-    //   message('Error: No value specified');
-    //   return;
-    // }
-    // Save it using the Chrome extension storage API.
+    if (!theValue) {
+      message('Error: No value specified');
+      return;
+    }
+    //Save it using the Chrome extension storage API.
     chrome.storage.local.set({'user_email_address': address});
     chrome.storage.local.set({'user_password': password});
- }
+
+
+    
+}
 
 function getUserSignupInput(){
     console.log("signup submit pressed");
@@ -25,6 +28,7 @@ function getUserSignupInput(){
     console.log("temppassword",userTempPassword);
     console.log("finalpass",userTempPassword);
     var userPassword = checkPassword(userTempPassword,userTempPasswordRepeat);
+    firebase.auth().createUserWithEmailAndPassword(userEmailAddress, userPassword);
     storageHandlerSignup(userEmailAddress, userPassword);
 }
 
