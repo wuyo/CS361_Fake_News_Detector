@@ -4,6 +4,9 @@ function checkPassword(temppass, repeatpass){
     if(temppass == repeatpass){
         return temppass;
     }
+    else{
+        return 0
+    }
 }
 
 function storageHandlerSignup(address, password){
@@ -14,6 +17,7 @@ function storageHandlerSignup(address, password){
     //Save it using the Chrome extension storage API.
     chrome.storage.local.set({'user_email_address': address});
     chrome.storage.local.set({'user_password': password});
+
 
 
     
@@ -28,9 +32,26 @@ function getUserSignupInput(){
     console.log("temppassword",userTempPassword);
     console.log("finalpass",userTempPassword);
     var userPassword = checkPassword(userTempPassword,userTempPasswordRepeat);
-    firebase.auth().createUserWithEmailAndPassword(userEmailAddress, userPassword);
-    storageHandlerSignup(userEmailAddress, userPassword);
+    // if (userPassword){
+    //     firebase.auth().createUserWithEmailAndPassword(userEmailAddress, userPassword);
+    //     storageHandlerSignup(userEmailAddress, userPassword);
+
+    // }
+    // else{
+    //     alert('Passwords Do Not Match.')
+    // }
+    firebase.auth().createUserWithEmailAndPassword(userEmailAddress, userPassword).then(function(){
+        window.location = "/signIn.html"
+     }).catch(function(error) {
+        
+        alert(error);
+   
+
+})
 }
 
 var signupButton = document.getElementById("signup_button");
  signupButton.addEventListener('click',getUserSignupInput);
+
+
+
