@@ -80,7 +80,7 @@ optionsLink3.addEventListener("click", function (e) {
     _ext2.default.tabs.create({ 'url': _ext2.default.extension.getURL('userProfile.html') });
   } else {
     // No user is signed in.
-    alert('Please sign in to a view your profile.')
+    alert('Please sign in to view your profile.')
     }
   });
 });
