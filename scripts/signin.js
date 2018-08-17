@@ -1,6 +1,5 @@
 function storageHandlerSignin(userEmailAddress,userPassword){
-	 
-
+	
 	 firebase.auth().signInWithEmailAndPassword(userEmailAddress, userPassword).then(function(){
 	 	window.location = "/userProfile.html"
 	 }).catch(function(error) {

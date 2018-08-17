@@ -32,14 +32,8 @@ function getUserSignupInput(){
     console.log("temppassword",userTempPassword);
     console.log("finalpass",userTempPassword);
     var userPassword = checkPassword(userTempPassword,userTempPasswordRepeat);
-    // if (userPassword){
-    //     firebase.auth().createUserWithEmailAndPassword(userEmailAddress, userPassword);
-    //     storageHandlerSignup(userEmailAddress, userPassword);
-
-    // }
-    // else{
-    //     alert('Passwords Do Not Match.')
-    // }
+     alert('Passwords Do Not Match.')
+   
     firebase.auth().createUserWithEmailAndPassword(userEmailAddress, userPassword).then(function(){
         window.location = "/signIn.html"
      }).catch(function(error) {

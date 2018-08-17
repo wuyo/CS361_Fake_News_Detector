@@ -69,6 +69,22 @@ optionsLink2.addEventListener("click", function (e) {
   _ext2.default.tabs.create({ 'url': _ext2.default.extension.getURL('signUp.html') });
 });
 
+var optionsLink3 = document.querySelector(".js-profile");
+optionsLink3.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  firebase.auth().onAuthStateChanged(function(user) {
+
+  if (user) {
+    // User is signed in
+    _ext2.default.tabs.create({ 'url': _ext2.default.extension.getURL('userProfile.html') });
+  } else {
+    // No user is signed in.
+    alert('Please sign in to a view your profile.')
+    }
+  });
+});
+
 },{"./utils/ext":2,"./utils/storage":3}],2:[function(require,module,exports){
 'use strict';
 
